@@ -1,10 +1,14 @@
 # YOLOv3 Object Detector Implemented in Python
 
-This is a codebase for self-learning so that I can better understand the working of the YOLO alorithms.<br>
+This is an application I made for self-learning so that I can better understand the working of the YOLO alorithms.<br>
+
+At the time of making this repo there are already more advanced versions of Yolo.<br>
 
 I am starting with the simpler YOLOv3 network and will then work up to the more complex versions of the YOLO network like Yolov5, Yolov7 etc.<br>
 
-The official version of Yolov3 was implemented in C
+<b>The official version of Yolov3 was implemented in C</b>
+
+<img src="det/det_test_image.jpeg"/><br>
 
 ## Setup the Application
 
