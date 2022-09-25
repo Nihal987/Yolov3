@@ -203,11 +203,11 @@ class Darknet(nn.Module):
                 
                 #Get the number of classes
                 num_classes = int (modules[i]["classes"])
-                
+
                 #Output the result
                 x = x.data
                 x = predict_transform(x, inp_dim, anchors, num_classes, CUDA)
-                
+
                 if type(x) == int:
                     continue
 
@@ -304,7 +304,7 @@ class Darknet(nn.Module):
                 conv.weight.data.copy_(conv_weights)
 
 def get_test_input():
-    img = cv2.imread("detector/dog-cycle-car.png")
+    img = cv2.imread("dog-cycle-car.png")
     img = cv2.resize(img, (416,416)) 
     img_ =  img[:,:,::-1].transpose((2,0,1))
     img_ = img_[np.newaxis,:,:,:]/255.0
@@ -314,8 +314,9 @@ def get_test_input():
             
 model = Darknet("cfg/yolov3.cfg")
 model.load_weights("yolov3.weights")
-# inp = get_test_input()
-# pred = model(inp, torch.cuda.is_available())
-# print(pred)
-# print(pred.size())
+inp = get_test_input()
+pred = model(inp, torch.cuda.is_available())
+pred = write_results(pred, confidence=0.5, num_classes=80, nms_conf = 0.4)
+print(pred)
+print(pred.size())
 

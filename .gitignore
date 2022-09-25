@@ -1,3 +1,5 @@
 yolov3.weights
-detector/__pycache__
-detector/.ipynb_checkpoints
+__pycache__
+.ipynb_checkpoints
+.DS_Store
+.vscode
