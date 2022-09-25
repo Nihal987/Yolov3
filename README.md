@@ -1,4 +1,4 @@
-# YOLOv3 Object Detector PyTorch from Scratch
+# YOLOv3 Object Detector Implemented in Python
 
 This is a codebase for self-learning so that I can better understand the working of the YOLO alorithms.<br>
 
