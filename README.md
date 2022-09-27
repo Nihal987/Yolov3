@@ -20,6 +20,10 @@ pip install -r requirements.txt
 ### Download the Weights
 - Download the weights file from this [link](https://pjreddie.com/media/files/yolov3.weights)
 - Store the file in the parent directory
+- If you're on Linux use
+```
+wget https://pjreddie.com/media/files/yolov3.weights
+```
 
 ## Running the Application
 
